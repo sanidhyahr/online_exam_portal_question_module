@@ -1,13 +1,14 @@
 package com.examportal.service.Impl;
 
-import com.examportal.model.Question;
-import com.examportal.repository.QuestionRepository;
-import com.examportal.service.QuestionService;
-import com.examportal.exception.ResourceNotFoundException;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.examportal.exception.ResourceNotFoundException;
+import com.examportal.model.Question;
+import com.examportal.repository.QuestionRepository;
+import com.examportal.service.QuestionService;
 
 @Service
 public class QuestionServiceImpl implements QuestionService {
@@ -17,6 +18,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question createQuestion(Question question) {
+        System.out.println("Saving question: " + question);
         return questionRepository.save(question);
     }
 
