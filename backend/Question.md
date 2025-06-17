@@ -145,5 +145,5 @@ The current security configuration (`SecurityConfig.java`) disables CSRF and per
 
 ## Contributors
 
-- **Developer**: [Your Name]
+- **Developer**: Sanidhya H R
 - **Date**: June 17, 2025
