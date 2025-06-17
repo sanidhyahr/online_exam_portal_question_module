@@ -16,38 +16,6 @@ The **Online Exam Portal** is a web-based application designed to facilitate onl
 
 ### Layers
 
-+---------------------+        +---------------------+        +---------------------+
-|   Controller Layer  |        |    Service Layer    |        |   Repository Layer  |
-|---------------------|        |---------------------|        |---------------------|
-| QuestionController  |        | QuestionServiceImpl |        | QuestionRepository  |
-|                     |        |                     |        |                     |
-| Handles HTTP        |        | Contains business   |        | Interacts with the  |
-| requests and maps   |        | logic for managing  |        | database using JPA. |
-| them to service     |        | questions.          |        |                     |
-| methods.            |        |                     |        |                     |
-+---------------------+        +---------------------+        +---------------------+
-        |                            |                            |
-        |                            |                            |
-        +----------------------------+----------------------------+
-                                     |
-                                     |
-                             +---------------------+
-                             |     Model Layer     |
-                             |---------------------|
-                             |      Question       |
-                             | Represents database |
-                             | entities.           |
-                             +---------------------+
-                                     |
-                                     |
-                             +---------------------+
-                             |   Database Tables   |
-                             |---------------------|
-                             | questions           |
-                             | question_options    |
-                             +---------------------+
-
-
 1. **Controller Layer**:
    - Handles HTTP requests and responses.
    - Maps endpoints to service methods.
