@@ -15,6 +15,39 @@ The **Online Exam Portal** is a web-based application designed to facilitate onl
 - **REST API**: Exposes endpoints for managing questions.
 
 ### Layers
+
++---------------------+        +---------------------+        +---------------------+
+|   Controller Layer  |        |    Service Layer    |        |   Repository Layer  |
+|---------------------|        |---------------------|        |---------------------|
+| QuestionController  |        | QuestionServiceImpl |        | QuestionRepository  |
+|                     |        |                     |        |                     |
+| Handles HTTP        |        | Contains business   |        | Interacts with the  |
+| requests and maps   |        | logic for managing  |        | database using JPA. |
+| them to service     |        | questions.          |        |                     |
+| methods.            |        |                     |        |                     |
++---------------------+        +---------------------+        +---------------------+
+        |                            |                            |
+        |                            |                            |
+        +----------------------------+----------------------------+
+                                     |
+                                     |
+                             +---------------------+
+                             |     Model Layer     |
+                             |---------------------|
+                             |      Question       |
+                             | Represents database |
+                             | entities.           |
+                             +---------------------+
+                                     |
+                                     |
+                             +---------------------+
+                             |   Database Tables   |
+                             |---------------------|
+                             | questions           |
+                             | question_options    |
+                             +---------------------+
+
+
 1. **Controller Layer**:
    - Handles HTTP requests and responses.
    - Maps endpoints to service methods.
@@ -35,6 +68,18 @@ The **Online Exam Portal** is a web-based application designed to facilitate onl
 5. **Exception Handling**:
    - Custom exceptions and global exception handling.
    - Example: `ResourceNotFoundException.java` and `GlobalExceptionHandler.java`.
+
+---
+
+## Dependencies
+
+### Required Dependencies
+- **Spring Boot Starter Web**: For building REST APIs.
+- **Spring Boot Starter Data JPA**: For database interaction using JPA.
+- **MySQL Connector**: For connecting to the MySQL database.
+- **Spring Boot Starter Security**: For security configurations.
+- **Swagger (Springfox)**: For API documentation.
+- **Jakarta Persistence API**: For JPA annotations.
 
 ---
 
