@@ -1,7 +1,5 @@
 # Online Exam Portal - Question Module Documentation
 
-# Online Exam Portal - Question Module Documentation
-
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
