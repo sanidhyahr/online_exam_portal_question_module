@@ -1,5 +1,23 @@
 # Online Exam Portal - Question Module Documentation
 
+# Online Exam Portal - Question Module Documentation
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+  - [Backend](#backend)
+  - [Layers](#layers)
+- [Dependencies](#dependencies)
+- [Database Tables](#database-tables)
+  - [`questions`](#questions)
+  - [`question_options`](#question_options)
+- [REST API Endpoints](#rest-api-endpoints)
+- [Security Configuration](#security-configuration)
+- [Exception Handling](#exception-handling)
+- [How to Run](#how-to-run)
+- [Future Enhancements](#future-enhancements)
+- [Contributors](#contributors)
+
 ## Project Overview
 
 The **Online Exam Portal** is a web-based application designed to facilitate online exams. This module focuses on managing questions, including CRUD operations for questions, categorization, and difficulty levels. It is built using **Spring Boot** and integrates with a **MySQL database** for persistent storage.
@@ -7,6 +25,8 @@ The **Online Exam Portal** is a web-based application designed to facilitate onl
 ---
 
 ## Architecture
+
+![Architecture Diagram](images/microservices-architecture.png)
 
 ### Backend
 - **Framework**: Spring Boot
